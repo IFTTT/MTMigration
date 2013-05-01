@@ -41,7 +41,7 @@
 
 
 + (NSString *)appVersion {
-    return [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleShortVersionString"];
+    return [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleVersion"];
 }
 
 + (void) setLastMigrationVersion:(NSString *)version {
