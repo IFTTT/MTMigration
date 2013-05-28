@@ -13,6 +13,12 @@
 
 @implementation MTMigration
 
++ (void) preventNewUsersFromRunningOldMigrations {
+    if ([self lastMigrationVersion].length == 0) {
+        [self setLastMigrationVersion:[self appVersion]];
+    }
+}
+
 + (void) migrateToVersion:(NSString *)version block:(void (^)())migrationBlock {
 	// version > lastMigrationVersion && version <= appVersion
     if ([version compare:[self lastMigrationVersion] options:NSNumericSearch] == NSOrderedDescending &&

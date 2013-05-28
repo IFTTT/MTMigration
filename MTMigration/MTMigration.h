@@ -10,6 +10,8 @@
 
 @interface MTMigration : NSObject
 
++ (void) preventNewUsersFromRunningOldMigrations;
+
 + (void) migrateToVersion:(NSString *)version block:(void (^)())migrationBlock;
 
 + (void) reset;
