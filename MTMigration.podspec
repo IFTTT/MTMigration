@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "MTMigration"
-  s.version      = "0.0.2a"
+  s.version      = "0.0.2"
   s.summary      = "Manages blocks of code that only need to run once on version updates in iOS apps."
   s.homepage     = "https://github.com/mysterioustrousers/MTMigration"
   s.license      = 'MIT'
